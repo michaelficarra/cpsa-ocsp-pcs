@@ -65,7 +65,7 @@
 
 	; successful abort
 	(defrole abort-success
-		(vars (a b t name) (m text))
+		(vars (x y t name) (m text))
 		(trace
 			(send (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; abort-request
 			(recv (enc (enc m x y "abort" (privk x)) (privk t)))                ; abort-response-success
@@ -73,7 +73,7 @@
 	)
 	; unsuccessful abort because of previous abort
 	(defrole abort-fail-aborted
-		(vars (a b t name) (m text))
+		(vars (x y t name) (m text))
 		(trace
 			(send (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; abort-request
 			(recv (enc (enc m y x "abort" (privk y)) (privk t)))                ; abort-response-fail-aborted
@@ -81,7 +81,7 @@
 	)
 	; unsuccessful abort because of previous resolution
 	(defrole abort-fail-resolved
-		(vars (a b t name) (m text))
+		(vars (x y t name) (m text))
 		(trace
 			(send (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; abort-request
 			(recv (enc m y x t (privk "sign" y)))                               ; abort-response-fail-resolved
@@ -93,7 +93,7 @@
 
 	; successful resolution
 	(defrole resolve-success
-		(vars (a b t name) (m text))
+		(vars (x y t name) (m text))
 		(trace
 			(send (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; resolve-request
 			(recv (enc m y x t (privk "sign" y)))                               ; resolve-response-success
@@ -101,7 +101,7 @@
 	)
 	; unsuccessful resolution because of previous abort
 	(defrole resolve-fail
-		(vars (a b t name) (m text))
+		(vars (x y t name) (m text))
 		(trace
 			(send (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; resolve-request
 			(recv (enc (enc m x y "abort" (privk x)) (privk t)))                ; resolve-response-fail
@@ -139,7 +139,7 @@
 
 	; successful resolution
 	(defrole ttp-resolve-success
-		(vars (a b t name) (m text))
+		(vars (x y t name) (m text))
 		(trace
 			(recv (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; ttp-resolve-request
 			(send (enc m y x t (privk "sign" y)))                               ; ttp-resolve-response-success
@@ -147,7 +147,7 @@
 	)
 	; unsuccessful resolution due to previous abortion
 	(defrole ttp-resolve-aborted
-		(vars (a b t name) (m text))
+		(vars (x y t name) (m text))
 		(trace
 			(recv (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; ttp-resolve-request
 			(send (enc (enc m x y "abort" (privk x)) (privk t)))                ; ttp-resolve-response-aborted
