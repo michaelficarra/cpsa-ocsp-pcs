@@ -1,192 +1,157 @@
 (defprotocol two-party-ocs basic
 
-	; everyone obeys the main protocol
-	(defrole optimistic-init
-		(vars (a b t name) (m text))
-		(trace
-			; initial pcs exchange
-			(send (enc m a b t (privk "pcs" a)))
-			(recv (enc m b a t (privk "pcs" b)))
-			; exchange publicly verifiable signatures
-			(send (enc m a b t (privk "sign" a)))
-			(recv (enc m b a t (privk "sign" b)))
-		)
-	)
-	(defrole optimistic-resp
-		(vars (a b t name) (m text))
-		(trace
-			; initial pcs exchange
-			(recv (enc m a b t (privk "pcs" a)))
-			(send (enc m b a t (privk "pcs" b)))
-			; exchange publicly verifiable signatures
-			(recv (enc m a b t (privk "sign" a)))
-			(send (enc m b a t (privk "sign" b)))
-		)
-	)
+	; ### init role
+	; (send (enc m a b t (privk "pcs" a)))                                ; init-pcs-send
+	; (recv (enc m b a t (privk "pcs" b)))                                ; init-pcs-rcv
+	; (send (enc m a b t (privk "sign" a)))                               ; init-sig-send
+	; (recv (enc m b a t (privk "sign" b)))                               ; init-sig-recv
+
+	; ### resp role
+	; (recv (enc m a b t (privk "pcs" a)))                                ; resp-pcs-recv
+	; (send (enc m b a t (privk "pcs" b)))                                ; resp-pcs-send
+	; (recv (enc m a b t (privk "sign" a)))                               ; resp-sig-recv
+	; (send (enc m b a t (privk "sign" b)))                               ; resp-sig-send
+
+	; ### aborter role
+	; (send (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; abort-request
+	; (recv (enc (enc m x y "abort" (privk x)) (privk t)))                ; abort-response-success
+	; (recv (enc (enc m y x "abort" (privk y)) (privk t)))                ; abort-response-fail-aborted
+	; (recv (enc m y x t (privk "sign" y)))                               ; abort-response-fail-resolved
+
+	; ### resolver role
+	; (send (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; resolve-request
+	; (recv (enc m y x t (privk "sign" y)))                               ; resolve-response-success
+	; (recv (enc (enc m x y "abort" (privk x)) (privk t)))                ; resolve-response-fail
+
+	; ### ttp role
+	; (recv (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; ttp-abort-request
+	; (send (enc (enc m x y "abort" (privk x)) (privk t)))                ; ttp-abort-response-success
+	; (send (enc (enc m y x "abort" (privk y)) (privk t)))                ; ttp-abort-response-fail-aborted
+	; (send (enc m y x t (privk "sign" y)))                               ; ttp-abort-response-fail-resolved
+	; (recv (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; ttp-resolve-request
+	; (send (enc m y x t (privk "sign" y)))                               ; ttp-resolve-response-success
+	; (send (enc (enc m x y "abort" (privk x)) (privk t)))                ; ttp-resolve-response-aborted
 
 
-	; after A sends an initial pcs, B stops communicating
-	(defrole resp-quits-a
-		(vars (a b t name) (m text))
-		(trace
-			(send (enc m a b t (privk "pcs" a)))
-			; B quits
-		)
-	)
-	(defrole resp-quits-b
-		(vars (a b t name) (m text))
-		(trace
-			(recv (enc m a b t (privk "pcs" a)))
-			; quit
-		)
-	)
+	; ### init
 
-
-	; after PCS exchange, A aborts and then B quits
-	(defrole init-aborts-resp-quits-a
+	; init in main protocol
+	(defrole init-main
 		(vars (a b t name) (m text))
 		(trace
-			; initial pcs exchange
-			(send (enc m a b t (privk "pcs" a)))
-			(recv (enc m b a t (privk "pcs" b)))
-			; perform an abort with T
-			(send (enc (enc m a b "abort" (privk a)) (pubk t)))
-			(recv (enc (enc m a b "abort" (privk a)) (privk t)))
-		)
-	)
-	(defrole init-aborts-resp-quits-b
-		(vars (a b t name) (m text))
-		(trace
-			; initial pcs exchange
-			(recv (enc m a b t (privk "pcs" a)))
-			(send (enc m b a t (privk "pcs" b)))
-			; not shown: A performs an abort with T
-			; quit
-		)
-	)
-	(defrole init-aborts-resp-quits-t
-		(vars (a b t name) (m text))
-		(trace
-			; A sent an abort request
-			(recv (enc (enc m a b "abort" (privk a)) (pubk t)))
-			(send (enc (enc m a b "abort" (privk a)) (privk t)))
+			(send (enc m a b t (privk "pcs" a)))                                ; init-pcs-send
+			(recv (enc m b a t (privk "pcs" b)))                                ; init-pcs-rcv
+			(send (enc m a b t (privk "sign" a)))                               ; init-sig-send
+			(recv (enc m b a t (privk "sign" b)))                               ; init-sig-recv
 		)
 	)
 
 
-	; after pcs exchange, A aborts and B attempts to resolve, but T responds with an aborted message
-	(defrole init-aborts-resp-resolves-a
+	; ### resp
+
+	; resp in main protocol
+	(defrole resp-000
 		(vars (a b t name) (m text))
 		(trace
-			; initial pcs exchange
-			(send (enc m a b t (privk "pcs" a)))
-			(recv (enc m b a t (privk "pcs" b)))
-			; perform an abort with T
-			(send (enc (enc m a b "abort" (privk a)) (pubk t)))
-			(recv (enc (enc m a b "abort" (privk a)) (privk t)))
-		)
-	)
-	(defrole init-aborts-resp-resolves-b
-		(vars (a b t name) (m text))
-		(trace
-			; initial pcs exchange
-			(recv (enc m a b t (privk "pcs" a)))
-			(send (enc m b a t (privk "pcs" b)))
-			; not shown: A performs an abort with T
-			; attempt resolution with T
-			(send (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)))
-			; failed resolution, session already aborted
-			(recv (enc (enc m a b "abort" (privk a)) (privk t)))
-		)
-	)
-	(defrole init-aborts-resp-resolves-t
-		(vars (a b t name) (m text))
-		(trace
-			; A sent an abort request
-			(recv (enc (enc m a b "abort" (privk a)) (pubk t)))
-			(send (enc (enc m a b "abort" (privk a)) (privk t)))
-			; B tries to resolve
-			(recv (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)))
-			; but we send him an aborted message
-			(send (enc (enc m a b "abort" (privk a)) (privk t)))
+			(recv (enc m a b t (privk "pcs" a)))                                ; resp-pcs-recv
+			(send (enc m b a t (privk "pcs" b)))                                ; resp-pcs-send
+			(recv (enc m a b t (privk "sign" a)))                               ; resp-sig-recv
+			(send (enc m b a t (privk "sign" b)))                               ; resp-sig-send
 		)
 	)
 
 
-	; after pcs exchange, A aborts but continues the main protocol properly
-	(defrole init-aborts-init-continues-a
+	; ### aborter
+
+	; successful abort
+	(defrole abort-success
 		(vars (a b t name) (m text))
 		(trace
-			; initial pcs exchange
-			(send (enc m a b t (privk "pcs" a)))
-			(recv (enc m b a t (privk "pcs" b)))
-			; perform an abort with T
-			(send (enc (enc m a b "abort" (privk a)) (pubk t)))
-			(recv (enc (enc m a b "abort" (privk a)) (privk t)))
-			; continue main protocol
-			(send (enc m a b t (privk "sign" a)))
-			(recv (enc m b a t (privk "sign" b)))
+			(send (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; abort-request
+			(recv (enc (enc m x y "abort" (privk x)) (privk t)))                ; abort-response-success
 		)
 	)
-	(defrole init-aborts-init-continues-b
+	; unsuccessful abort because of previous abort
+	(defrole abort-fail-aborted
 		(vars (a b t name) (m text))
 		(trace
-			; initial pcs exchange
-			(recv (enc m a b t (privk "pcs" a)))
-			(send (enc m b a t (privk "pcs" b)))
-			; not shown: A performs an abort with T
-			; main protocol continues
-			(recv (enc m a b t (privk "sign" a)))
-			(send (enc m b a t (privk "sign" b)))
+			(send (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; abort-request
+			(recv (enc (enc m y x "abort" (privk y)) (privk t)))                ; abort-response-fail-aborted
 		)
 	)
-	(defrole init-aborts-init-continues-t
+	; unsuccessful abort because of previous resolution
+	(defrole abort-fail-resolved
 		(vars (a b t name) (m text))
 		(trace
-			; A sent an abort request
-			(recv (enc (enc m a b "abort" (privk a)) (pubk t)))
-			(send (enc (enc m a b "abort" (privk a)) (privk t)))
+			(send (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; abort-request
+			(recv (enc m y x t (privk "sign" y)))                               ; abort-response-fail-resolved
 		)
 	)
 
 
-	; after pcs exchange, A aborts and sends a publicly-verifiably signature to B
-	; B attempts a resolution with T, but recevies an aborted message
-	(defrole init-aborts-init-continues-resp-resolves-a )
-	(defrole init-aborts-init-continues-resp-resolves-b )
-	(defrole init-aborts-init-continues-resp-resolves-t )
+	; ### resolver
 
-
-	; after pcs exchange, A aborts and A sends a publicly-verifiably signature to B
-	; B attempts to abort with T, but finds that the session has already been aborted
-	(defrole init-aborts-init-continues-resp-aborts-a )
-	(defrole init-aborts-init-continues-resp-aborts-b )
-	(defrole init-aborts-init-continues-resp-aborts-t )
-
-
-	; after receiving a pcs from A, B immediately contacts T for resolution
-	; when A does not receive a pcs from B, A attempts to abort, but receives B's signature from T instead
-	(defrole resp-resolves-init-aborts-a )
-	(defrole resp-resolves-init-aborts-b )
-	(defrole resp-resolves-init-aborts-t )
-
-
-	; after receiving a pcs from A, B immediately contacts T for resolution
-	; when A does not receive a pcs from B, A contacts T for resolution
-	(defrole resp-resolves-init-resolves-a )
-	(defrole resp-resolves-init-resolves-b )
-	(defrole resp-resolves-init-resolves-t )
-
-
-	; after proper pcs exchange, A sends publicly-verifiable signature to B
-	; B does not respond (ignored: or sends a bad signature) and A contacts T for resolution
-	(defrole init-resolves-a
+	; successful resolution
+	(defrole resolve-success
 		(vars (a b t name) (m text))
 		(trace
-
+			(send (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; resolve-request
+			(recv (enc m y x t (privk "sign" y)))                               ; resolve-response-success
 		)
 	)
-	(defrole init-resolves-b )
-	(defrole init-resolves-t )
+	; unsuccessful resolution because of previous abort
+	(defrole resolve-fail
+		(vars (a b t name) (m text))
+		(trace
+			(send (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; resolve-request
+			(recv (enc (enc m x y "abort" (privk x)) (privk t)))                ; resolve-response-fail
+		)
+	)
+
+
+	; ### ttp
+
+	; successful abort
+	(defrole ttp-abort-success
+		(vars (x y t name) (m text))
+		(trace
+			(recv (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; ttp-abort-request
+			(send (enc (enc m x y "abort" (privk x)) (privk t)))                ; ttp-abort-response-success
+		)
+	)
+	; other party previously aborted; respond with cached response
+	(defrole ttp-abort-fail-aborted
+		(vars (x y t name) (m text))
+		(trace
+			(recv (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; ttp-abort-request
+			(send (enc (enc m y x "abort" (privk y)) (privk t)))                ; ttp-abort-response-fail-aborted
+		)
+	)
+	; respond with signature from previous resolution
+	(defrole ttp-abort-fail-resolved
+		(vars (x y t name) (m text))
+		(trace
+			(recv (enc (enc m x y "abort" (privk x)) (pubk  t)))                ; ttp-abort-request
+			(send (enc m y x t (privk "sign" y)))                               ; ttp-abort-response-fail-resolved
+		)
+	)
+
+
+	; successful resolution
+	(defrole ttp-resolve-success
+		(vars (a b t name) (m text))
+		(trace
+			(recv (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; ttp-resolve-request
+			(send (enc m y x t (privk "sign" y)))                               ; ttp-resolve-response-success
+		)
+	)
+	; unsuccessful resolution due to previous abortion
+	(defrole ttp-resolve-aborted
+		(vars (a b t name) (m text))
+		(trace
+			(recv (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x))) ; ttp-resolve-request
+			(send (enc (enc m x y "abort" (privk x)) (privk t)))                ; ttp-resolve-response-aborted
+		)
+	)
 
 )
