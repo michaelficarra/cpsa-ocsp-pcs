@@ -5,12 +5,12 @@
 	; (recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
 	; (send (enc m a b t (privk "sign" a))) ; init-sig-send
 	; (recv (enc m b a t (privk "sign" b))) ; init-sig-recv
-	; (send (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; abort-request
-	; (recv (enc (enc m a b "abort" (privk a)) (privk "sign" t))) ; abort-response-success
-	; (recv (enc (enc m b a t (privk "sign" b)) (pubk "enc" a)))  ; abort-response-fail-resolved
+	; (send (enc m a b "abort" (privk "ttp-sign" a)))                                          ; abort-request
+	; (recv (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; abort-response-success
+	; (recv (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; abort-response-fail-resolved
 	; (send (enc (enc m b a t (privk "pcs" b)) (enc m a b t (privk "sign" a)) (pubk "enc" t))) ; resolve-request
-	; (recv (enc (enc m b a t (privk "sign" b)) (pubk "enc" a)))                               ; resolve-response-success
-	; (recv (enc (enc (enc m a b "abort" (privk a)) (privk "sign" t)) (pubk "enc" a)))         ; resolve-response-aborted
+	; (recv (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; resolve-response-success
+	; (recv (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; resolve-response-aborted
 
 	; ### resp role
 	; (recv (enc m a b t (privk "pcs" a)))  ; resp-pcs-recv
@@ -18,18 +18,18 @@
 	; (recv (enc m a b t (privk "sign" a))) ; resp-sig-recv
 	; (send (enc m b a t (privk "sign" b))) ; resp-sig-send
 	; (send (enc (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)) (pubk "enc" t))) ; resolve-request
-	; (recv (enc (enc m a b t (privk "sign" a)) (pubk "enc" b)))                               ; resolve-response-success
-	; (recv (enc (enc (enc m b a "abort" (privk b)) (privk "sign" t)) (pubk "enc" b)))         ; resolve-response-aborted
+	; (recv (enc (enc m a b t (privk "sign" a)) (privk "sign" t)))                             ; resolve-response-success
+	; (recv (enc (enc m b a "abort" (privk "ttp-sign" b)) (privk "sign" t)))                   ; resolve-response-aborted
 
 	; ### resolver role
 
 	; ### ttp role
-	; (recv (enc (enc m x y "abort" (privk x)) (pubk "enc" t)))                                ; ttp-abort-request
-	; (send (enc (enc (enc m x y "abort" (privk x)) (privk "sign" t)) (pubk "enc" x)))         ; ttp-abort-response-success
-	; (send (enc (enc m y x t (privk "sign" y)) (pubk "enc" x)))                               ; ttp-abort-response-fail-resolved
+	; (recv (enc m a b "abort" (privk "ttp-sign" a)))                                          ; ttp-abort-request
+	; (send (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; ttp-abort-response-success
+	; (send (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; ttp-abort-response-fail-resolved
 	; (recv (enc (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x)) (pubk "enc" t))) ; ttp-resolve-request
-	; (send (enc (enc m y x t (privk "sign" y)) (pubk "enc" x)))                               ; ttp-resolve-response-success
-	; (send (enc (enc (enc m x y "abort" (privk x)) (privk "sign" t)) (pubk "enc" x)))         ; ttp-resolve-response-aborted
+	; (send (enc (enc m y x t (privk "sign" y)) (privk "sign" t)))                             ; ttp-resolve-response-success
+	; (send (enc (enc m x y "abort" (privk "ttp-sign" x)) (privk "sign" t)))                   ; ttp-resolve-response-aborted
 
 
 	; ### init
@@ -49,8 +49,8 @@
 		(vars (a b t name) (m text))
 		(trace
 			(send (enc m a b t (privk "pcs" a)))  ; init-pcs-send
-			(send (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; abort-request
-			(recv (enc (enc m a b "abort" (privk a)) (privk "sign" t))) ; abort-response-success
+			(send (enc m a b "abort" (privk "ttp-sign" a)))                                          ; abort-request
+			(recv (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; abort-response-success
 		)
 	)
 	; init-02
@@ -58,8 +58,8 @@
 		(vars (a b t name) (m text))
 		(trace
 			(send (enc m a b t (privk "pcs" a)))  ; init-pcs-send
-			(send (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; abort-request
-			(recv (enc (enc m b a t (privk "sign" b)) (pubk "enc" a)))  ; abort-response-fail-resolved
+			(send (enc m a b "abort" (privk "ttp-sign" a)))                                          ; abort-request
+			(recv (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; abort-response-fail-resolved
 		)
 	)
 	; init-03
@@ -68,8 +68,8 @@
 		(trace
 			(send (enc m a b t (privk "pcs" a)))  ; init-pcs-send
 			(recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
-			(send (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; abort-request
-			(recv (enc (enc m a b "abort" (privk a)) (privk "sign" t))) ; abort-response-success
+			(send (enc m a b "abort" (privk "ttp-sign" a)))                                          ; abort-request
+			(recv (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; abort-response-success
 		)
 	)
 	; init-04
@@ -78,8 +78,8 @@
 		(trace
 			(send (enc m a b t (privk "pcs" a)))  ; init-pcs-send
 			(recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
-			(send (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; abort-request
-			(recv (enc (enc m b a t (privk "sign" b)) (pubk "enc" a)))  ; abort-response-fail-resolved
+			(send (enc m a b "abort" (privk "ttp-sign" a)))                                          ; abort-request
+			(recv (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; abort-response-fail-resolved
 		)
 	)
 	; init-05
@@ -89,7 +89,7 @@
 			(send (enc m a b t (privk "pcs" a)))  ; init-pcs-send
 			(recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
 			(send (enc (enc m b a t (privk "pcs" b)) (enc m a b t (privk "sign" a)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc m b a t (privk "sign" b)) (pubk "enc" a)))                               ; resolve-response-success
+			(recv (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; resolve-response-success
 		)
 	)
 	; init-06
@@ -99,7 +99,7 @@
 			(send (enc m a b t (privk "pcs" a)))  ; init-pcs-send
 			(recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
 			(send (enc (enc m b a t (privk "pcs" b)) (enc m a b t (privk "sign" a)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc (enc m a b "abort" (privk a)) (privk "sign" t)) (pubk "enc" a)))         ; resolve-response-aborted
+			(recv (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; resolve-response-aborted
 		)
 	)
 	; init-07
@@ -109,8 +109,8 @@
 			(send (enc m a b t (privk "pcs" a)))  ; init-pcs-send
 			(recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
 			(send (enc m a b t (privk "sign" a))) ; init-sig-send
-			(send (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; abort-request
-			(recv (enc (enc m a b "abort" (privk a)) (privk "sign" t))) ; abort-response-success
+			(send (enc m a b "abort" (privk "ttp-sign" a)))                                          ; abort-request
+			(recv (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; abort-response-success
 		)
 	)
 	; init-08
@@ -120,8 +120,8 @@
 			(send (enc m a b t (privk "pcs" a)))  ; init-pcs-send
 			(recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
 			(send (enc m a b t (privk "sign" a))) ; init-sig-send
-			(send (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; abort-request
-			(recv (enc (enc m b a t (privk "sign" b)) (pubk "enc" a)))  ; abort-response-fail-resolved
+			(send (enc m a b "abort" (privk "ttp-sign" a)))                                          ; abort-request
+			(recv (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; abort-response-fail-resolved
 		)
 	)
 	; init-09
@@ -132,7 +132,7 @@
 			(recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
 			(send (enc m a b t (privk "sign" a))) ; init-sig-send
 			(send (enc (enc m b a t (privk "pcs" b)) (enc m a b t (privk "sign" a)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc m b a t (privk "sign" b)) (pubk "enc" a)))                               ; resolve-response-success
+			(recv (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; resolve-response-success
 		)
 	)
 	; init-10
@@ -143,7 +143,7 @@
 			(recv (enc m b a t (privk "pcs" b)))  ; init-pcs-rcv
 			(send (enc m a b t (privk "sign" a))) ; init-sig-send
 			(send (enc (enc m b a t (privk "pcs" b)) (enc m a b t (privk "sign" a)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc (enc m a b "abort" (privk a)) (privk "sign" t)) (pubk "enc" a)))         ; resolve-response-aborted
+			(recv (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; resolve-response-aborted
 		)
 	)
 
@@ -166,7 +166,7 @@
 		(trace
 			(recv (enc m a b t (privk "pcs" a)))  ; resp-pcs-recv
 			(send (enc (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc m a b t (privk "sign" a)) (pubk "enc" b)))                               ; resolve-response-success
+			(recv (enc (enc m a b t (privk "sign" a)) (privk "sign" t)))                             ; resolve-response-success
 		)
 	)
 	; resp-02
@@ -175,7 +175,7 @@
 		(trace
 			(recv (enc m a b t (privk "pcs" a)))  ; resp-pcs-recv
 			(send (enc (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc (enc m b a "abort" (privk b)) (privk "sign" t)) (pubk "enc" b)))         ; resolve-response-aborted
+			(recv (enc (enc m b a "abort" (privk "ttp-sign" b)) (privk "sign" t)))                   ; resolve-response-aborted
 		)
 	)
 	; resp-03
@@ -185,7 +185,7 @@
 			(recv (enc m a b t (privk "pcs" a)))  ; resp-pcs-recv
 			(send (enc m b a t (privk "pcs" b)))  ; resp-pcs-send
 			(send (enc (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc m a b t (privk "sign" a)) (pubk "enc" b)))                               ; resolve-response-success
+			(recv (enc (enc m a b t (privk "sign" a)) (privk "sign" t)))                             ; resolve-response-success
 		)
 	)
 	; resp-04
@@ -195,7 +195,7 @@
 			(recv (enc m a b t (privk "pcs" a)))  ; resp-pcs-recv
 			(send (enc m b a t (privk "pcs" b)))  ; resp-pcs-send
 			(send (enc (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc (enc m b a "abort" (privk b)) (privk "sign" t)) (pubk "enc" b)))         ; resolve-response-aborted
+			(recv (enc (enc m b a "abort" (privk "ttp-sign" b)) (privk "sign" t)))                   ; resolve-response-aborted
 		)
 	)
 	; resp-05
@@ -206,7 +206,7 @@
 			(send (enc m b a t (privk "pcs" b)))  ; resp-pcs-send
 			(recv (enc m a b t (privk "sign" a))) ; resp-sig-recv
 			(send (enc (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc m a b t (privk "sign" a)) (pubk "enc" b)))                               ; resolve-response-success
+			(recv (enc (enc m a b t (privk "sign" a)) (privk "sign" t)))                             ; resolve-response-success
 		)
 	)
 	; resp-06
@@ -217,7 +217,7 @@
 			(send (enc m b a t (privk "pcs" b)))  ; resp-pcs-send
 			(recv (enc m a b t (privk "sign" a))) ; resp-sig-recv
 			(send (enc (enc m a b t (privk "pcs" a)) (enc m b a t (privk "sign" b)) (pubk "enc" t))) ; resolve-request
-			(recv (enc (enc (enc m b a "abort" (privk b)) (privk "sign" t)) (pubk "enc" b)))         ; resolve-response-aborted
+			(recv (enc (enc m b a "abort" (privk "ttp-sign" b)) (privk "sign" t)))                   ; resolve-response-aborted
 		)
 	)
 
@@ -228,16 +228,16 @@
 	(defrole ttp-01-abort-success
 		(vars (a b t name) (m text))
 		(trace
-			(recv (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; ttp-abort-request
-			(send (enc (enc m a b "abort" (privk a)) (privk "sign" t))) ; ttp-abort-response-success
+			(recv (enc m a b "abort" (privk "ttp-sign" a)))                                          ; ttp-abort-request
+			(send (enc (enc m a b "abort" (privk "ttp-sign" a)) (privk "sign" t)))                   ; ttp-abort-response-success
 		)
 	)
 	; unsuccessful abort: respond with signature from previous resolution
 	(defrole ttp-02-abort-fail-resolved
 		(vars (a b t name) (m text))
 		(trace
-			(recv (enc (enc m a b "abort" (privk a)) (pubk "enc" t)))   ; ttp-abort-request
-			(send (enc m b a t (privk "sign" b)))                       ; ttp-abort-response-fail-resolved
+			(recv (enc m a b "abort" (privk "ttp-sign" a)))                                          ; ttp-abort-request
+			(send (enc (enc m b a t (privk "sign" b)) (privk "sign" t)))                             ; ttp-abort-response-fail-resolved
 		)
 	)
 	; successful resolution
@@ -245,7 +245,7 @@
 		(vars (x y t name) (m text))
 		(trace
 			(recv (enc (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x)) (pubk "enc" t))) ; ttp-resolve-request
-			(send (enc m y x t (privk "sign" y)))                                                    ; ttp-resolve-response-success
+			(send (enc (enc m y x t (privk "sign" y)) (privk "sign" t)))                             ; ttp-resolve-response-success
 		)
 	)
 	; unsuccessful resolution: previously aborted, respond with abort confirmation
@@ -253,7 +253,7 @@
 		(vars (x y t name) (m text))
 		(trace
 			(recv (enc (enc m y x t (privk "pcs" y)) (enc m x y t (privk "sign" x)) (pubk "enc" t))) ; ttp-resolve-request
-			(send (enc (enc m x y "abort" (privk x)) (privk "sign" t)))                              ; ttp-resolve-response-aborted
+			(send (enc (enc m x y "abort" (privk "ttp-sign" x)) (privk "sign" t)))                   ; ttp-resolve-response-aborted
 		)
 	)
 
@@ -270,8 +270,8 @@
 	(vars (a b t name) (m text))
 	(defstrand init-main 4 (a a) (b b) (t t) (m m))
 	(non-orig
-		(privk "sign" a) (privk "pcs" a)
-		(privk "sign" b) (privk "pcs" b)
+		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 		(privk "sign" t) (privk "enc" t)
 	)
 	(uniq-orig m)
@@ -282,9 +282,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-01-abort 3 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -292,9 +292,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-02-abort-fail 3 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -302,9 +302,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-03-abort 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -312,9 +312,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-04-abort-fail 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -322,9 +322,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-07-abort 5 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -332,9 +332,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-08-abort-fail 5 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -344,9 +344,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-05-resolve 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -354,9 +354,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-06-resolve-fail 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -364,9 +364,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-09-resolve 5 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -374,9 +374,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-10-resolve-fail 5 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -389,9 +389,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand resp-main 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
@@ -402,9 +402,9 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand resp-01-resolve 3 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "ttp-sig" a) (privk "sign" a) (privk "pcs" a)
-;		(privk "ttp-sig" b) (privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t)
+;		(privk "sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
 ;)
