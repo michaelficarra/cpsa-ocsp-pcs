@@ -266,24 +266,24 @@
 ; ### init
 
 ; # main
-(defpreskeleton two-party-ocs
-	(vars (a b t name) (m text))
-	(defstrand init-main 4 (a a) (b b) (t t) (m m))
-	(non-orig
-		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
-		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
-		(privk "sign" t) (privk "enc" t)
-	)
-	(uniq-orig m)
-)
+;(defpreskeleton two-party-ocs
+;	(vars (a b t name) (m text))
+;	(defstrand init-main 4 (a a) (b b) (t t) (m m))
+;	(non-orig
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
 
 ; # aborts
 ;(defpreskeleton two-party-ocs
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-01-abort 3 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -292,8 +292,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-02-abort-fail 3 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -302,8 +302,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-03-abort 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -312,8 +312,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-04-abort-fail 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -322,8 +322,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-07-abort 5 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -332,8 +332,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-08-abort-fail 5 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -344,8 +344,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-05-resolve 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -354,8 +354,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-06-resolve-fail 4 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -364,8 +364,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-09-resolve 5 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -374,8 +374,8 @@
 ;	(vars (a b t name) (m text))
 ;	(defstrand init-10-resolve-fail 5 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -385,25 +385,74 @@
 ; ### resp
 
 ; # main
-;(defpreskeleton two-party-ocs
-;	(vars (a b t name) (m text))
-;	(defstrand resp-main 4 (a a) (b b) (t t) (m m))
-;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
-;		(privk "sign" t) (privk "enc" t)
-;	)
-;	(uniq-orig m)
-;)
+(defpreskeleton two-party-ocs
+	(vars (a b t name) (m text))
+	(defstrand resp-main 4 (a a) (b b) (t t) (m m))
+	(non-orig
+		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+		(privk "sign" t) (privk "enc" t)
+	)
+	(uniq-orig m)
+)
 
 ; # resolves
-
 ;(defpreskeleton two-party-ocs
 ;	(vars (a b t name) (m text))
 ;	(defstrand resp-01-resolve 3 (a a) (b b) (t t) (m m))
 ;	(non-orig
-;		(privk "sign" a) (privk "pcs" a)
-;		(privk "sign" b) (privk "pcs" b)
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
+;(defpreskeleton two-party-ocs
+;	(vars (a b t name) (m text))
+;	(defstrand resp-02-resolve-fail 3 (a a) (b b) (t t) (m m))
+;	(non-orig
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
+;(defpreskeleton two-party-ocs
+;	(vars (a b t name) (m text))
+;	(defstrand resp-03-resolve 4 (a a) (b b) (t t) (m m))
+;	(non-orig
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
+;(defpreskeleton two-party-ocs
+;	(vars (a b t name) (m text))
+;	(defstrand resp-04-resolve-fail 4 (a a) (b b) (t t) (m m))
+;	(non-orig
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
+;(defpreskeleton two-party-ocs
+;	(vars (a b t name) (m text))
+;	(defstrand resp-05-resolve 5 (a a) (b b) (t t) (m m))
+;	(non-orig
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
+;(defpreskeleton two-party-ocs
+;	(vars (a b t name) (m text))
+;	(defstrand resp-06-resolve-fail 5 (a a) (b b) (t t) (m m))
+;	(non-orig
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
 ;		(privk "sign" t) (privk "enc" t)
 ;	)
 ;	(uniq-orig m)
@@ -411,3 +460,44 @@
 
 
 ; ### ttp
+
+;(defpreskeleton two-party-ocs
+;	(vars (a b t name) (m text))
+;	(defstrand ttp-01-abort-success 2 (a a) (b b) (t t) (m m))
+;	(non-orig
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
+;(defpreskeleton two-party-ocs
+;	(vars (a b t name) (m text))
+;	(defstrand ttp-02-abort-fail-resolved 2 (a a) (b b) (t t) (m m))
+;	(non-orig
+;		(privk "sign" a) (privk "ttp-sign" a) (privk "pcs" a)
+;		(privk "sign" b) (privk "ttp-sign" b) (privk "pcs" b)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
+;(defpreskeleton two-party-ocs
+;	(vars (x y t name) (m text))
+;	(defstrand ttp-03-resolve-success 2 (x x) (y y) (t t) (m m))
+;	(non-orig
+;		(privk "sign" x) (privk "ttp-sign" x) (privk "pcs" x)
+;		(privk "sign" y) (privk "ttp-sign" y) (privk "pcs" y)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)
+;(defpreskeleton two-party-ocs
+;	(vars (x y t name) (m text))
+;	(defstrand ttp-04-resolve-aborted 2 (x x) (y y) (t t) (m m))
+;	(non-orig
+;		(privk "sign" x) (privk "ttp-sign" x) (privk "pcs" x)
+;		(privk "sign" y) (privk "ttp-sign" y) (privk "pcs" y)
+;		(privk "sign" t) (privk "enc" t)
+;	)
+;	(uniq-orig m)
+;)

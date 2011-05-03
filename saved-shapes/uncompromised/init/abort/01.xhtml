@@ -1,0 +1,2050 @@
+<?xml version="1.0"?>
+<!-- CPSA 2.1.1 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+ <title>CPSA two-party-ocs</title>
+</head>
+<body>
+
+<pre>(comment &quot;CPSA 2.1.1&quot;)
+(comment &quot;Extracted shapes&quot;)
+(comment &quot;CPSA 2.1.1&quot;)
+(comment &quot;All input read&quot;)</pre>
+
+<p id="t0">Tree 0.</p>
+
+<div>
+ <svg
+  width='129.840pt' height='979.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 129.840 979.920' font-size='12.000'>
+  <rect
+   x='0.000' y='0.000' width='129.840' height='979.920'
+   style='fill: none; stroke: black; stroke-width: 0.960;'/>
+  <text
+   x='89.880' y='926.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i171&quot;, &quot;_self&quot;)'>171</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='939.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='851.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i170&quot;, &quot;_self&quot;)'>170</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='864.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='776.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i165&quot;, &quot;_self&quot;)'>165</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='789.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='701.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i137&quot;, &quot;_self&quot;)'>137</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='714.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='626.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i84&quot;, &quot;_self&quot;)'>84</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='639.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='551.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i37&quot;, &quot;_self&quot;)'>37</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='564.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='476.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i36&quot;, &quot;_self&quot;)'>36</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='489.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='401.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i30&quot;, &quot;_self&quot;)'>30</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='414.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='326.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i28&quot;, &quot;_self&quot;)'>28</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='339.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='251.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i23&quot;, &quot;_self&quot;)'>23</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='264.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='176.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i10&quot;, &quot;_self&quot;)'>10</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='189.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='101.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i9&quot;, &quot;_self&quot;)'>9</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='114.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='89.880' y='26.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i3&quot;, &quot;_self&quot;)'>3</text>
+  <line
+   x1='39.960' y1='489.960' x2='89.880' y2='39.960'
+   style='stroke-width: 0.960; stroke: gray;'/>
+  <text
+   x='39.960' y='476.040' style='text-anchor: middle; fill: black;'
+   onclick='window.open(&quot;#i0&quot;, &quot;_self&quot;)'>0</text>
+  </svg></div>
+
+<pre>(defprotocol two-party-ocs basic
+  (defrole init-main
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b t (privk &quot;sign&quot; a)))
+      (recv (enc m b a t (privk &quot;sign&quot; b)))))
+  (defrole init-01-abort
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t)))))
+  (defrole init-02-abort-fail
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (defrole init-03-abort
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t)))))
+  (defrole init-04-abort-fail
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (defrole init-05-resolve
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send
+        (enc (enc m b a t (privk &quot;pcs&quot; b))
+          (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t)))
+      (recv (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (defrole init-06-resolve-fail
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send
+        (enc (enc m b a t (privk &quot;pcs&quot; b))
+          (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t)))))
+  (defrole init-07-abort
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b t (privk &quot;sign&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t)))))
+  (defrole init-08-abort-fail
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b t (privk &quot;sign&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (defrole init-09-resolve
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b t (privk &quot;sign&quot; a)))
+      (send
+        (enc (enc m b a t (privk &quot;pcs&quot; b))
+          (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t)))
+      (recv (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (defrole init-10-resolve-fail
+    (vars (a b t name) (m text))
+    (trace (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b t (privk &quot;sign&quot; a)))
+      (send
+        (enc (enc m b a t (privk &quot;pcs&quot; b))
+          (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t)))))
+  (defrole resp-main
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))
+      (recv (enc m a b t (privk &quot;sign&quot; a)))
+      (send (enc m b a t (privk &quot;sign&quot; b)))))
+  (defrole resp-01-resolve
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))
+      (recv (enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t)))))
+  (defrole resp-02-resolve-fail
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))
+      (recv
+        (enc (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b))
+          (privk &quot;sign&quot; t)))))
+  (defrole resp-03-resolve
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))
+      (recv (enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t)))))
+  (defrole resp-04-resolve-fail
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))
+      (recv
+        (enc (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b))
+          (privk &quot;sign&quot; t)))))
+  (defrole resp-05-resolve
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))
+      (recv (enc m a b t (privk &quot;sign&quot; a)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))
+      (recv (enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t)))))
+  (defrole resp-06-resolve-fail
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))
+      (recv (enc m a b t (privk &quot;sign&quot; a)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))
+      (recv
+        (enc (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b))
+          (privk &quot;sign&quot; t)))))
+  (defrole ttp-01-abort-success
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t)))))
+  (defrole ttp-02-abort-fail-resolved
+    (vars (a b t name) (m text))
+    (trace (recv (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (send (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (defrole ttp-03-resolve-success
+    (vars (x y t name) (m text))
+    (trace
+      (recv
+        (enc (enc m y x t (privk &quot;pcs&quot; y))
+          (enc m x y t (privk &quot;sign&quot; x)) (pubk &quot;enc&quot; t)))
+      (send (enc (enc m y x t (privk &quot;sign&quot; y)) (privk &quot;sign&quot; t)))))
+  (defrole ttp-04-resolve-aborted
+    (vars (x y t name) (m text))
+    (trace
+      (recv
+        (enc (enc m y x t (privk &quot;pcs&quot; y))
+          (enc m x y t (privk &quot;sign&quot; x)) (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m x y &quot;abort&quot; (privk &quot;ttp-sign&quot; x))
+          (privk &quot;sign&quot; t))))))</pre>
+
+<p id="i0">Item <a href="#t0">0</a>, Children: <a href="#i3">3</a> <a href="#i9">9</a> <a href="#i10">10</a> <a href="#i23">23</a> <a href="#i28">28</a> <a href="#i30">30</a> <a href="#i36">36</a> <a href="#i37">37</a> <a href="#i84">84</a> <a href="#i137">137</a> <a href="#i165">165</a> <a href="#i170">170</a> <a href="#i171">171</a>.</p>
+
+<div>
+ <svg
+  width='79.920pt' height='304.920pt' xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 79.920 304.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k0' x='0.000' y='0.000' width='79.920' height='304.920'>
+   <rect
+    x='0.000' y='0.000' width='79.920' height='304.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle style='fill: red;' cx='39.960' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='39.960' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 0</text></svg></svg>
+ </div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t)))))
+  (label 0)
+  (unrealized (0 2))
+  (comment &quot;2 in cohort - 2 not yet seen&quot;))</pre>
+
+<p id="i3">Item <a href="#t0">3</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='179.880pt' height='304.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 179.880 304.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k3' x='0.000' y='0.000' width='179.880' height='304.920'>
+   <rect
+    x='0.000' y='0.000' width='179.880' height='304.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='139.920' y1='189.960' x2='139.920' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 139.920 264.960 Q 92.940 264.960 45.960 264.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='139.920' cy='189.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='264.960' r='6.000'/></a>
+   <path
+    d='M 39.960 189.960 Q 86.940 189.960 133.920 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-01-abort-success</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='89.940' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 3 (realized)</text></svg>
+  </svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-01-abort-success 2 (m m) (a a) (b b) (t t))
+  (precedes ((0 1) (1 0)) ((1 1) (0 2)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand init-01-abort 2)
+    (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (1 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t)))))
+  (label 3)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i9">Item <a href="#t0">9</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='279.840pt' height='304.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 279.840 304.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k9' x='0.000' y='0.000' width='279.840' height='304.920'>
+   <rect
+    x='0.000' y='0.000' width='279.840' height='304.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='239.880' y1='114.960' x2='239.880' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='189.960' x2='139.920' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 239.880 189.960 Q 192.900 189.960 145.920 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a a t (privk &quot;pcs&quot; a)) (enc m a a t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a a t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 139.920 264.960 Q 92.940 264.960 45.960 264.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a a t (privk &quot;pcs&quot; a)) (enc m a a t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='189.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 136.920 77.460 233.880 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a a t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-01-resolve</text></a>
+   <a xlink:title='((m m) (x a) (y a) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b a) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='139.920' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 9 (realized)</text></svg>
+  </svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b a) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y a) (t t))
+  (defstrand resp-01-resolve 2 (m m) (a a) (b a) (t t))
+  (precedes ((0 0) (2 0)) ((1 1) (0 2)) ((2 1) (1 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;sign&quot; a)
+    (privk &quot;sign&quot; t) (privk &quot;ttp-sign&quot; a))
+  (uniq-orig m)
+  (operation encryption-test (added-strand resp-01-resolve 2)
+    (enc m a a t (privk &quot;sign&quot; a)) (1 0))
+  (traces
+    ((send (enc m a a t (privk &quot;pcs&quot; a)))
+      (send (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m a a t (privk &quot;pcs&quot; a)) (enc m a a t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a a t (privk &quot;pcs&quot; a)))
+      (send
+        (enc (enc m a a t (privk &quot;pcs&quot; a))
+          (enc m a a t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t)))))
+  (label 9)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i10">Item <a href="#t0">10</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='279.840pt' height='379.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 279.840 379.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k10' x='0.000' y='0.000' width='279.840' height='379.920'>
+   <rect
+    x='0.000' y='0.000' width='279.840' height='379.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='239.880' y1='114.960' x2='239.880' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='264.960' x2='139.920' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 239.880 264.960 Q 192.900 264.960 145.920 264.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a a t (privk &quot;pcs&quot; a)) (enc m a a t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='239.880' cy='264.960' r='6.000'/></a>
+   <a xlink:title='(enc m a a t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a a t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 139.920 339.960 Q 92.940 339.960 45.960 339.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a a t (privk &quot;pcs&quot; a)) (enc m a a t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='264.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 136.920 77.460 233.880 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a a t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-03-resolve</text></a>
+   <a xlink:title='((m m) (x a) (y a) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b a) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='139.920' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 10 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b a) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y a) (t t))
+  (defstrand resp-03-resolve 3 (m m) (a a) (b a) (t t))
+  (precedes ((0 0) (2 0)) ((1 1) (0 2)) ((2 2) (1 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;sign&quot; a)
+    (privk &quot;sign&quot; t) (privk &quot;ttp-sign&quot; a))
+  (uniq-orig m)
+  (operation encryption-test (added-strand resp-03-resolve 3)
+    (enc m a a t (privk &quot;sign&quot; a)) (1 0))
+  (traces
+    ((send (enc m a a t (privk &quot;pcs&quot; a)))
+      (send (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m a a t (privk &quot;pcs&quot; a)) (enc m a a t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a a t (privk &quot;pcs&quot; a)))
+      (send (enc m a a t (privk &quot;pcs&quot; a)))
+      (send
+        (enc (enc m a a t (privk &quot;pcs&quot; a))
+          (enc m a a t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t)))))
+  (label 10)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i23">Item <a href="#t0">23</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='279.840pt' height='379.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 279.840 379.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k23' x='0.000' y='0.000' width='279.840' height='379.920'>
+   <rect
+    x='0.000' y='0.000' width='279.840' height='379.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='239.880' y1='189.960' x2='239.880' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='264.960' x2='139.920' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 239.880 264.960 Q 192.900 264.960 145.920 264.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a a t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='239.880' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 139.920 339.960 Q 92.940 339.960 45.960 339.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a a t (privk &quot;pcs&quot; a)) (enc m a a t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='339.960' r='6.000'/></a>
+   <path
+    d='M 39.960 189.960 Q 136.920 152.460 233.880 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a a t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>ttp-02-abort-fail-resolved</text></a>
+   <a xlink:title='((m m) (x a) (y a) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b a) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='139.920' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 23 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b a) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y a) (t t))
+  (defstrand ttp-02-abort-fail-resolved 2 (m m) (a a) (b a) (t t))
+  (precedes ((0 1) (2 0)) ((1 1) (0 2)) ((2 1) (1 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;sign&quot; a)
+    (privk &quot;sign&quot; t) (privk &quot;ttp-sign&quot; a))
+  (uniq-orig m)
+  (operation encryption-test (added-strand init-01-abort 2)
+    (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (2 0))
+  (traces
+    ((send (enc m a a t (privk &quot;pcs&quot; a)))
+      (send (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m a a t (privk &quot;pcs&quot; a)) (enc m a a t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a a &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (send (enc (enc m a a t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t)))))
+  (label 23)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i28">Item <a href="#t0">28</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='379.800pt' height='379.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 379.800 379.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k28' x='0.000' y='0.000' width='379.800' height='379.920'>
+   <rect
+    x='0.000' y='0.000' width='379.800' height='379.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='339.840' y1='114.960' x2='339.840' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='189.960' x2='239.880' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='264.960' x2='139.920' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 339.840 189.960 Q 292.860 189.960 245.880 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='339.840' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='339.840' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 239.880 264.960 Q 192.900 264.960 145.920 264.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='239.880' cy='264.960' r='6.000'/></a>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 139.920 339.960 Q 92.940 339.960 45.960 339.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='264.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 186.900 77.460 333.840 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>resp-main</text></a>
+   <a xlink:title='((m m) (a b) (b a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-01-resolve</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='189.900' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 28 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand resp-01-resolve 2 (m m) (a b) (b a) (t t))
+  (defstrand resp-main 2 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (3 0)) ((1 1) (0 2)) ((2 1) (1 0)) ((3 1) (2 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand resp-main 2)
+    (enc m b a t (privk &quot;pcs&quot; b)) (3 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send
+        (enc (enc m b a t (privk &quot;pcs&quot; b))
+          (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))))
+  (label 28)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i30">Item <a href="#t0">30</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='379.800pt' height='454.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 379.800 454.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k30' x='0.000' y='0.000' width='379.800' height='454.920'>
+   <rect
+    x='0.000' y='0.000' width='379.800' height='454.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='339.840' y1='114.960' x2='339.840' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='189.960' x2='239.880' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='339.960' x2='139.920' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 339.840 189.960 Q 292.860 189.960 245.880 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='339.840' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='339.840' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 239.880 339.960 Q 192.900 339.960 145.920 339.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='239.880' cy='339.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='264.960' r='6.000'/></a>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 139.920 414.960 Q 92.940 414.960 45.960 414.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='339.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 186.900 77.460 333.840 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>resp-main</text></a>
+   <a xlink:title='((m m) (a b) (b a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-03-resolve</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='189.900' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 30 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand resp-03-resolve 3 (m m) (a b) (b a) (t t))
+  (defstrand resp-main 2 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (3 0)) ((1 1) (0 2)) ((2 2) (1 0)) ((3 1) (2 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand resp-main 2)
+    (enc m b a t (privk &quot;pcs&quot; b)) (3 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send
+        (enc (enc m b a t (privk &quot;pcs&quot; b))
+          (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))))
+  (label 30)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i36">Item <a href="#t0">36</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='479.760pt' height='379.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 479.760 379.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k36' x='0.000' y='0.000' width='479.760' height='379.920'>
+   <rect
+    x='0.000' y='0.000' width='479.760' height='379.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='439.800' y1='114.960' x2='439.800' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='339.840' y1='189.960' x2='339.840' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='114.960' x2='239.880' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='264.960' x2='139.920' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 439.800 189.960 Q 392.820 189.960 345.840 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='439.800' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='439.800' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 339.840 264.960 Q 242.880 227.460 145.920 264.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='339.840' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='339.840' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 239.880 189.960 Q 192.300 225.660 144.719 261.359'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 139.920 339.960 Q 92.940 339.960 45.960 339.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='264.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 136.920 77.460 233.880 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <path
+    d='M 39.960 114.960 Q 236.880 77.460 433.800 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='439.800' y='77.460'
+     style='text-anchor: middle;'>resp-01-resolve</text></a>
+   <a xlink:title='((m m) (x b) (y a) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>ttp-03-resolve-success</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-main</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='239.880' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 36 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand resp-main 2 (m m) (a a) (b b) (t t))
+  (defstrand ttp-03-resolve-success 2 (m m) (x b) (y a) (t t))
+  (defstrand resp-01-resolve 2 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (2 0)) ((0 0) (4 0)) ((1 1) (0 2)) ((2 1) (1 0))
+    ((3 1) (1 0)) ((4 1) (3 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand resp-01-resolve 2)
+    (enc m b a t (privk &quot;sign&quot; b)) (3 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b))))
+    ((recv
+       (enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b))
+         (pubk &quot;enc&quot; t)))
+      (send (enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))))
+  (label 36)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i37">Item <a href="#t0">37</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='379.800pt' height='454.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 379.800 454.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k37' x='0.000' y='0.000' width='379.800' height='454.920'>
+   <rect
+    x='0.000' y='0.000' width='379.800' height='454.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='339.840' y1='114.960' x2='339.840' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='264.960' x2='239.880' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='339.960' x2='139.920' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 339.840 264.960 Q 292.860 264.960 245.880 264.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='339.840' cy='264.960' r='6.000'/></a>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='339.840' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='339.840' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 239.880 339.960 Q 192.900 339.960 145.920 339.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='239.880' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='239.880' cy='264.960' r='6.000'/></a>
+   <path
+    d='M 139.920 414.960 Q 92.940 414.960 45.960 414.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='339.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 186.900 77.460 333.840 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>resp-03-resolve</text></a>
+   <a xlink:title='((m m) (x b) (y a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>ttp-03-resolve-success</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='189.900' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 37 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand ttp-03-resolve-success 2 (m m) (x b) (y a) (t t))
+  (defstrand resp-03-resolve 3 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (3 0)) ((1 1) (0 2)) ((2 1) (1 0)) ((3 2) (2 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand resp-03-resolve 3)
+    (enc m b a t (privk &quot;sign&quot; b)) (3 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b))
+         (pubk &quot;enc&quot; t)))
+      (send (enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))))
+  (label 37)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i84">Item <a href="#t0">84</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='479.760pt' height='454.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 479.760 454.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k84' x='0.000' y='0.000' width='479.760' height='454.920'>
+   <rect
+    x='0.000' y='0.000' width='479.760' height='454.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='439.800' y1='189.960' x2='439.800' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='339.840' y1='264.960' x2='339.840' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='114.960' x2='239.880' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='339.960' x2='139.920' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 439.800 264.960 Q 392.820 264.960 345.840 264.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t))'>
+    <circle cx='439.800' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='439.800' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 339.840 339.960 Q 242.880 302.460 145.920 339.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='339.840' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='339.840' cy='264.960' r='6.000'/></a>
+   <path
+    d='M 239.880 189.960 Q 191.564 262.464 143.247 334.967'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 139.920 414.960 Q 92.940 414.960 45.960 414.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='414.960' r='6.000'/></a>
+   <path
+    d='M 39.960 189.960 Q 236.880 152.460 433.800 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 136.920 77.460 233.880 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='439.800' y='77.460'
+     style='text-anchor: middle;'>ttp-02-abort-fail-resolved</text></a>
+   <a xlink:title='((m m) (x b) (y a) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>ttp-03-resolve-success</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-main</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='239.880' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 84 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand resp-main 2 (m m) (a a) (b b) (t t))
+  (defstrand ttp-03-resolve-success 2 (m m) (x b) (y a) (t t))
+  (defstrand ttp-02-abort-fail-resolved 2 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (2 0)) ((0 1) (4 0)) ((1 1) (0 2)) ((2 1) (1 0))
+    ((3 1) (1 0)) ((4 1) (3 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand init-01-abort 2)
+    (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (4 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b))))
+    ((recv
+       (enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b))
+         (pubk &quot;enc&quot; t)))
+      (send (enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))))
+    ((recv (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (send (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (label 84)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i137">Item <a href="#t0">137</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='479.760pt' height='529.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 479.760 529.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k137' x='0.000' y='0.000' width='479.760' height='529.920'>
+   <rect
+    x='0.000' y='0.000' width='479.760' height='529.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='439.800' y1='189.960' x2='439.800' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='339.840' y1='114.960' x2='339.840' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='189.960' x2='239.880' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='414.960' x2='139.920' y2='489.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='489.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 439.800 264.960 Q 342.649 263.906 245.498 337.853'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t))'>
+    <circle cx='439.800' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='439.800' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 339.840 189.960 Q 292.860 189.960 245.880 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='339.840' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='339.840' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 239.880 414.960 Q 192.900 414.960 145.920 414.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;sign&quot; a))'>
+    <circle cx='239.880' cy='414.960' r='6.000'/></a>
+   <a xlink:title='(enc m b a t (privk &quot;sign&quot; b))'>
+    <circle cx='239.880' cy='339.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='264.960' r='6.000'/></a>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 139.920 489.960 Q 92.940 489.960 45.960 489.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='489.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='489.960' r='6.000'/></a>
+   <path
+    d='M 39.960 189.960 Q 236.880 152.460 433.800 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 186.900 77.460 333.840 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='439.800' y='77.460'
+     style='text-anchor: middle;'>ttp-02-abort-fail-resolved</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>resp-main</text></a>
+   <a xlink:title='((m m) (a b) (b a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-main</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='239.880' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 137 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand resp-main 4 (m m) (a b) (b a) (t t))
+  (defstrand resp-main 2 (m m) (a a) (b b) (t t))
+  (defstrand ttp-02-abort-fail-resolved 2 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (3 0)) ((0 1) (4 0)) ((1 1) (0 2)) ((2 3) (1 0))
+    ((3 1) (2 0)) ((4 1) (2 2)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand init-01-abort 2)
+    (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (4 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;sign&quot; b)))
+      (send (enc m a b t (privk &quot;sign&quot; a))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b))))
+    ((recv (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (send (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (label 137)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i165">Item <a href="#t0">165</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='479.760pt' height='529.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 479.760 529.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k165' x='0.000' y='0.000' width='479.760' height='529.920'>
+   <rect
+    x='0.000' y='0.000' width='479.760' height='529.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='439.800' y1='189.960' x2='439.800' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='339.840' y1='114.960' x2='339.840' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='189.960' x2='239.880' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='414.960' x2='139.920' y2='489.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='489.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 439.800 264.960 Q 342.649 263.906 245.498 337.853'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t))'>
+    <circle cx='439.800' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='439.800' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 339.840 189.960 Q 292.860 189.960 245.880 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='339.840' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='339.840' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 239.880 414.960 Q 192.900 414.960 145.920 414.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='239.880' cy='414.960' r='6.000'/></a>
+   <a xlink:title='(enc m b a t (privk &quot;sign&quot; b))'>
+    <circle cx='239.880' cy='339.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='264.960' r='6.000'/></a>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 139.920 489.960 Q 92.940 489.960 45.960 489.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='489.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='489.960' r='6.000'/></a>
+   <path
+    d='M 39.960 189.960 Q 236.880 152.460 433.800 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 186.900 77.460 333.840 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='439.800' y='77.460'
+     style='text-anchor: middle;'>ttp-02-abort-fail-resolved</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>resp-main</text></a>
+   <a xlink:title='((m m) (a b) (b a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-05-resolve</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='239.880' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 165 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand resp-05-resolve 4 (m m) (a b) (b a) (t t))
+  (defstrand resp-main 2 (m m) (a a) (b b) (t t))
+  (defstrand ttp-02-abort-fail-resolved 2 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (3 0)) ((0 1) (4 0)) ((1 1) (0 2)) ((2 3) (1 0))
+    ((3 1) (2 0)) ((4 1) (2 2)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand init-01-abort 2)
+    (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (4 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m b a t (privk &quot;pcs&quot; b)))
+      (send (enc m a b t (privk &quot;pcs&quot; a)))
+      (recv (enc m b a t (privk &quot;sign&quot; b)))
+      (send
+        (enc (enc m b a t (privk &quot;pcs&quot; b))
+          (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b))))
+    ((recv (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (send (enc (enc m b a t (privk &quot;sign&quot; b)) (privk &quot;sign&quot; t)))))
+  (label 165)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i170">Item <a href="#t0">170</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='579.720pt' height='454.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 579.720 454.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k170' x='0.000' y='0.000' width='579.720' height='454.920'>
+   <rect
+    x='0.000' y='0.000' width='579.720' height='454.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='539.760' y1='114.960' x2='539.760' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='439.800' y1='189.960' x2='439.800' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='339.840' y1='264.960' x2='339.840' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='114.960' x2='239.880' y2='189.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='339.960' x2='139.920' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 539.760 189.960 Q 492.780 189.960 445.800 189.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='539.760' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='539.760' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 439.800 264.960 Q 392.820 264.960 345.840 264.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b)) (privk &quot;sign&quot; t))'>
+    <circle cx='439.800' cy='264.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='439.800' cy='189.960' r='6.000'/></a>
+   <path
+    d='M 339.840 339.960 Q 242.880 302.460 145.920 339.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='339.840' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b))'>
+    <circle cx='339.840' cy='264.960' r='6.000'/></a>
+   <path
+    d='M 239.880 189.960 Q 191.564 262.464 143.247 334.967'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='239.880' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='239.880' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 139.920 414.960 Q 92.940 414.960 45.960 414.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='339.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 136.920 77.460 233.880 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <path
+    d='M 39.960 114.960 Q 286.860 77.460 533.760 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='539.760' y='77.460'
+     style='text-anchor: middle;'>resp-01-resolve</text></a>
+   <a xlink:title='((m m) (x b) (y a) (t t))'>
+    <text
+     x='439.800' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a b) (b a) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>ttp-02-abort-fail-resolved</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>resp-main</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='289.860' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 170 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand resp-main 2 (m m) (a a) (b b) (t t))
+  (defstrand ttp-02-abort-fail-resolved 2 (m m) (a b) (b a) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x b) (y a) (t t))
+  (defstrand resp-01-resolve 2 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (2 0)) ((0 0) (5 0)) ((1 1) (0 2)) ((2 1) (1 0))
+    ((3 1) (1 0)) ((4 1) (3 0)) ((5 1) (4 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand resp-01-resolve 2)
+    (enc m b a t (privk &quot;sign&quot; b)) (4 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b))))
+    ((recv (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b)))
+      (send (enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))))
+  (label 170)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+<p id="i171">Item <a href="#t0">171</a>, Parent: <a href="#i0">0</a>.</p>
+
+<div>
+ <svg
+  width='479.760pt' height='529.920pt'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'
+  viewBox='0 0 479.760 529.920' font-size='12.000'>
+  <defs>
+   <marker
+    id='arrow' orient='auto' markerWidth='5' markerHeight='10' refX='5'
+    refY='5'>
+    <path
+     d='M 0 0 5 5 0 10'
+     style='stroke-width: 2; fill: none; stroke: black;'/></marker>
+   </defs>
+  <svg id='k171' x='0.000' y='0.000' width='479.760' height='529.920'>
+   <rect
+    x='0.000' y='0.000' width='479.760' height='529.920'
+    style='fill: none; stroke: black; stroke-width: 0.960;'/>
+   <line
+    x1='439.800' y1='114.960' x2='439.800' y2='264.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='339.840' y1='264.960' x2='339.840' y2='339.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='239.880' y1='339.960' x2='239.880' y2='414.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='139.920' y1='414.960' x2='139.920' y2='489.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <line
+    x1='39.960' y1='114.960' x2='39.960' y2='489.960'
+    style='stroke-width: 0.960; stroke: gray;'/>
+   <path
+    d='M 439.800 264.960 Q 392.820 264.960 345.840 264.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='439.800' cy='264.960' r='6.000'/></a>
+   <a xlink:title='(enc m b a t (privk &quot;pcs&quot; b))'>
+    <circle cx='439.800' cy='189.960' r='6.000'/></a>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='439.800' cy='114.960' r='6.000'/></a>
+   <path
+    d='M 339.840 339.960 Q 292.860 339.960 245.880 339.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b)) (privk &quot;sign&quot; t))'>
+    <circle cx='339.840' cy='339.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t))'>
+    <circle cx='339.840' cy='264.960' r='6.000'/></a>
+   <path
+    d='M 239.880 414.960 Q 192.900 414.960 145.920 414.960'
+    style='stroke-dasharray: 6.000,2.400; stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='239.880' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b))'>
+    <circle cx='239.880' cy='339.960' r='6.000'/></a>
+   <path
+    d='M 139.920 489.960 Q 92.940 489.960 45.960 489.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='139.920' cy='489.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a)) (pubk &quot;enc&quot; t))'>
+    <circle cx='139.920' cy='414.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)) (privk &quot;sign&quot; t))'>
+    <circle cx='39.960' cy='489.960' r='6.000'/></a>
+   <a
+    xlink:title='(enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))'>
+    <circle cx='39.960' cy='414.960' r='6.000'/></a>
+   <path
+    d='M 39.960 114.960 Q 236.880 77.460 433.800 114.960'
+    style='stroke-width: 0.960; stroke: black; marker-end: url(#arrow); fill: none;'/>
+   <a xlink:title='(enc m a b t (privk &quot;pcs&quot; a))'>
+    <circle cx='39.960' cy='114.960' r='6.000'/></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='439.800' y='77.460'
+     style='text-anchor: middle;'>resp-03-resolve</text></a>
+   <a xlink:title='((m m) (x b) (y a) (t t))'>
+    <text
+     x='339.840' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a b) (b a) (t t))'>
+    <text
+     x='239.880' y='77.460'
+     style='text-anchor: middle;'>ttp-02-abort-fail-resolved</text></a>
+   <a xlink:title='((m m) (x a) (y b) (t t))'>
+    <text
+     x='139.920' y='77.460'
+     style='text-anchor: middle;'>ttp-04-resolve-aborted</text></a>
+   <a xlink:title='((m m) (a a) (b b) (t t))'>
+    <text
+     x='39.960' y='77.460'
+     style='text-anchor: middle;'>init-01-abort</text></a>
+   <text
+    x='239.880' y='39.960'
+    style='text-anchor: middle;'>two-party-ocs 171 (realized)</text>
+   </svg></svg></div>
+
+<pre>(defskeleton two-party-ocs
+  (vars (m text) (a b t name))
+  (defstrand init-01-abort 3 (m m) (a a) (b b) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x a) (y b) (t t))
+  (defstrand ttp-02-abort-fail-resolved 2 (m m) (a b) (b a) (t t))
+  (defstrand ttp-04-resolve-aborted 2 (m m) (x b) (y a) (t t))
+  (defstrand resp-03-resolve 3 (m m) (a a) (b b) (t t))
+  (precedes ((0 0) (4 0)) ((1 1) (0 2)) ((2 1) (1 0)) ((3 1) (2 0))
+    ((4 2) (3 0)))
+  (non-orig (privk &quot;enc&quot; t) (privk &quot;pcs&quot; a) (privk &quot;pcs&quot; b)
+    (privk &quot;sign&quot; a) (privk &quot;sign&quot; b) (privk &quot;sign&quot; t)
+    (privk &quot;ttp-sign&quot; a) (privk &quot;ttp-sign&quot; b))
+  (uniq-orig m)
+  (operation encryption-test (added-strand resp-03-resolve 3)
+    (enc m b a t (privk &quot;sign&quot; b)) (4 0))
+  (traces
+    ((send (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a)))
+      (recv
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m b a t (privk &quot;pcs&quot; b)) (enc m a b t (privk &quot;sign&quot; a))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m a b &quot;abort&quot; (privk &quot;ttp-sign&quot; a))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b)))
+      (send (enc (enc m a b t (privk &quot;sign&quot; a)) (privk &quot;sign&quot; t))))
+    ((recv
+       (enc (enc m a b t (privk &quot;pcs&quot; a)) (enc m b a t (privk &quot;sign&quot; b))
+         (pubk &quot;enc&quot; t)))
+      (send
+        (enc (enc m b a &quot;abort&quot; (privk &quot;ttp-sign&quot; b))
+          (privk &quot;sign&quot; t))))
+    ((recv (enc m a b t (privk &quot;pcs&quot; a)))
+      (send (enc m b a t (privk &quot;pcs&quot; b)))
+      (send
+        (enc (enc m a b t (privk &quot;pcs&quot; a))
+          (enc m b a t (privk &quot;sign&quot; b)) (pubk &quot;enc&quot; t)))))
+  (label 171)
+  (parent 0)
+  (unrealized)
+  (shape))</pre>
+
+</body>
+</html>
